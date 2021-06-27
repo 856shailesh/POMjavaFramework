@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="11643" started-at="2021-06-27T12:31:11 IST" finished-at="2021-06-27T12:31:23 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="11643" started-at="2021-06-27T12:31:11 IST" finished-at="2021-06-27T12:31:23 IST">
+      <class name="com.qa.opencart.tests.LoginPageTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@1fe20588]" name="setUp" is-config="true" duration-ms="7931" started-at="2021-06-27T12:31:11 IST" finished-at="2021-06-27T12:31:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="forgotPwdLinkTest()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@1fe20588]" name="forgotPwdLinkTest" duration-ms="70" started-at="2021-06-27T12:31:19 IST" finished-at="2021-06-27T12:31:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgotPwdLinkTest -->
+        <test-method status="PASS" signature="loginPageTitleTest()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@1fe20588]" name="loginPageTitleTest" duration-ms="51" started-at="2021-06-27T12:31:19 IST" finished-at="2021-06-27T12:31:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPageTitleTest -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@1fe20588]" name="loginTest" duration-ms="2661" started-at="2021-06-27T12:31:19 IST" finished-at="2021-06-27T12:31:22 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@1fe20588]" name="tearDown" is-config="true" duration-ms="905" started-at="2021-06-27T12:31:22 IST" finished-at="2021-06-27T12:31:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.qa.opencart.tests.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
