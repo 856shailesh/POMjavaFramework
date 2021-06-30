@@ -64,7 +64,7 @@ public class AccountsPage {
 		System.out.println("Searching the product " + productName);
 		elementUtil.doSendKeys(searchField, productName);
 		elementUtil.doClick(searchButton);
-		return new searchResultsPage(driver);
+		return new SearchResultsPage(driver);
 	}
 	
 	

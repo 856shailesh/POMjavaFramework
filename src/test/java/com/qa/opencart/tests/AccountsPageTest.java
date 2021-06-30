@@ -44,8 +44,27 @@ public class AccountsPageTest extends BaseTest {
 	public void headerTest() {
 		Assert.assertEquals(accountsPage.getAccountsPageHeader(), Constants.ACCOUNTS_PAGE_HEADER);
 	}
-	
-	
-	
 
+	@DataProvider
+	public Object[][] productData() {
+		return new Object[][] { { "Macbook" }, { "iMac" }, { "Apple" } };
+	}
+
+	@Test(dataProvider = "productData")
+	public void searchTest(String ProductName) {
+		searchResultsPage = accountsPage.doSearch(ProductName);
+		Assert.assertTrue(searchResultsPage.getProductListCount() > 0);
+	}
+
+	@DataProvider
+	public Object[][] productSelectData() {
+		return new Object[][] { { "Macbook" , "Macbook Pro" }, { "iMac", "iMac"} , { "Apple" , "Apple Cinema 30" } };
+	}
+	
+	@Test (dataProvider = "productSelectData")
+	public void selectProduct(String productName , String mainProductName) {
+		searchResultsPage = accountsPage.doSearch(productName);
+		productInfoPage = searchResultsPage.selectProduct(mainProductName);
+		Assert.assertEquals(productInfoPage.getProductHeaderText(), mainProductName);
+	}
 }
