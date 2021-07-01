@@ -1,25 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
+<testng-results skipped="0" failed="2" ignored="2" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="16924" started-at="2021-06-29T17:23:30 IST" finished-at="2021-06-29T17:23:47 IST">
+  <suite name="Default suite" duration-ms="49899" started-at="2021-07-01T05:07:40Z" finished-at="2021-07-01T05:08:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="16924" started-at="2021-06-29T17:23:30 IST" finished-at="2021-06-29T17:23:47 IST">
+    <test name="Default test" duration-ms="49899" started-at="2021-07-01T05:07:40Z" finished-at="2021-07-01T05:08:29Z">
       <class name="com.qa.opencart.tests.ProductInfoPageTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@4445629]" name="setUp" is-config="true" duration-ms="6201" started-at="2021-06-29T17:23:30 IST" finished-at="2021-06-29T17:23:36 IST">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@1a968a59]" name="setUp" is-config="true" duration-ms="29383" started-at="2021-07-01T05:07:40Z" finished-at="2021-07-01T05:08:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="accPageSetup()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@4445629]" name="accPageSetup" is-config="true" duration-ms="2530" started-at="2021-06-29T17:23:36 IST" finished-at="2021-06-29T17:23:39 IST">
+        <test-method status="PASS" signature="accPageSetup()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@1a968a59]" name="accPageSetup" is-config="true" duration-ms="2474" started-at="2021-07-01T05:08:09Z" finished-at="2021-07-01T05:08:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- accPageSetup -->
-        <test-method status="PASS" signature="productInfoTest()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@4445629]" name="productInfoTest" duration-ms="7241" started-at="2021-06-29T17:23:39 IST" finished-at="2021-06-29T17:23:46 IST">
+        <test-method status="FAIL" signature="productImagesTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@1a968a59]" name="productImagesTest" duration-ms="6718" started-at="2021-07-01T05:08:12Z" data-provider="getProductData" finished-at="2021-07-01T05:08:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Macbook]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Macbook Pro]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all elements located by By.cssSelector: ul.thumbnails img (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SEZT1FF221NCU', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\SHAILE~1.KUM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 340f1fb862e274511d158e5eeae0cf5a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.cssSelector: ul.thumbnails img (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SEZT1FF221NCU', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\SHAILE~1.KUM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 340f1fb862e274511d158e5eeae0cf5a
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.opencart.utils.ElementUtil.waitForElementsToBeVisible(ElementUtil.java:216)
+at com.qa.opencart.pages.ProductInfoPage.getProductImagesCount(ProductInfoPage.java:40)
+at com.qa.opencart.tests.ProductInfoPageTest.productImagesTest(ProductInfoPageTest.java:37)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- productInfoTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@4445629]" name="tearDown" is-config="true" duration-ms="929" started-at="2021-06-29T17:23:46 IST" finished-at="2021-06-29T17:23:47 IST">
+        </test-method> <!-- productImagesTest -->
+        <test-method status="PASS" signature="productImagesTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@1a968a59]" name="productImagesTest" duration-ms="3458" started-at="2021-07-01T05:08:19Z" data-provider="getProductData" finished-at="2021-07-01T05:08:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[iMac]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[iMac]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productImagesTest -->
+        <test-method status="FAIL" signature="productImagesTest(java.lang.String, java.lang.String)[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@1a968a59]" name="productImagesTest" duration-ms="6499" started-at="2021-07-01T05:08:22Z" data-provider="getProductData" finished-at="2021-07-01T05:08:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[apple]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[apple cinema 30']]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for visibility of all elements located by By.cssSelector: ul.thumbnails img (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SEZT1FF221NCU', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\SHAILE~1.KUM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 340f1fb862e274511d158e5eeae0cf5a]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.cssSelector: ul.thumbnails img (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SEZT1FF221NCU', ip: '192.168.1.6', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\SHAILE~1.KUM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 340f1fb862e274511d158e5eeae0cf5a
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at com.qa.opencart.utils.ElementUtil.waitForElementsToBeVisible(ElementUtil.java:216)
+at com.qa.opencart.pages.ProductInfoPage.getProductImagesCount(ProductInfoPage.java:40)
+at com.qa.opencart.tests.ProductInfoPageTest.productImagesTest(ProductInfoPageTest.java:37)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productImagesTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.ProductInfoPageTest@1a968a59]" name="tearDown" is-config="true" duration-ms="969" started-at="2021-07-01T05:08:29Z" finished-at="2021-07-01T05:08:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

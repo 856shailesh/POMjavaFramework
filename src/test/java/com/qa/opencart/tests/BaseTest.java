@@ -11,6 +11,7 @@ import com.qa.opencart.factory.DriverFactory;
 import com.qa.opencart.pages.AccountsPage;
 import com.qa.opencart.pages.LoginPage;
 import com.qa.opencart.pages.ProductInfoPage;
+import com.qa.opencart.pages.RegistrationPage;
 import com.qa.opencart.pages.SearchResultsPage;
 
 public class BaseTest {
@@ -21,6 +22,8 @@ public class BaseTest {
 	public AccountsPage accountsPage;
 	public SearchResultsPage searchResultsPage;
 	public ProductInfoPage productInfoPage;
+	public RegistrationPage registrationPage;
+	
 	
 	public SoftAssert softAssert = new SoftAssert();
 

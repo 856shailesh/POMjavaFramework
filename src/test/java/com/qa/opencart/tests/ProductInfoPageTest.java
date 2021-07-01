@@ -17,10 +17,10 @@ public class ProductInfoPageTest extends BaseTest {
 		accountsPage = loginPage.doLogin(prop.getProperty("username").trim(), prop.getProperty("password").trim());
 	}
 	
-//	@DataProvider
-//	public Object[][] getProductData() {
-//		return ExcelUtil.getTestData(Constants.PRODUCT_SHEET_NAME);
-//	}
+	@DataProvider
+	public Object[][] getProductData() {
+		return ExcelUtil.getTestData(Constants.PRODUCT_SHEET_NAME);
+	}
 	
 	@Test(dataProvider = "getProductData")
 	public void productInfoHeaderTest(String productName, String mainProductName) {
@@ -30,10 +30,10 @@ public class ProductInfoPageTest extends BaseTest {
 	}
 
 	
-	@Test
-	public void productImagesTest() {
-		searchResultsPage = accountsPage.doSearch("iMac");
-		productInfoPage = searchResultsPage.selectProduct("iMac");
+	@Test(dataProvider = "getProductData")
+	public void productImagesTest(String productName, String mainProductName) {
+		searchResultsPage = accountsPage.doSearch(productName);
+		productInfoPage = searchResultsPage.selectProduct(mainProductName);
 		Assert.assertEquals(productInfoPage.getProductImagesCount(), Constants.IMAC_IMAGE_COUNT);
 	}
 	

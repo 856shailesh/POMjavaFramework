@@ -43,5 +43,10 @@ public class LoginPage {
 		elementUtil.doClick(loginBtn);
 		return new AccountsPage(driver);
 	}
+	
+	public RegistrationPage navigateToRegisterPage() {
+		elementUtil.doClick(registerLink);
+		return new RegistrationPage(driver);
+	}
 
 }
