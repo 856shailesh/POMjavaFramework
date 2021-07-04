@@ -6,6 +6,8 @@ import org.openqa.selenium.WebDriver;
 import com.qa.opencart.utils.Constants;
 import com.qa.opencart.utils.ElementUtil;
 
+import io.qameta.allure.Step;
+
 public class LoginPage {
 
 	private WebDriver driver;
@@ -25,6 +27,7 @@ public class LoginPage {
 	}
 
 	// 3. page actions:
+	@Step("getting login page title")
 	public String getLoginPageTitle() {
 		return elementUtil.waitForTitleContains(Constants.LOGIN_PAGE_TITLE, 5);
 	}
@@ -32,10 +35,12 @@ public class LoginPage {
 	/*
 	 * private variables are called by public layer : Encapsulation
 	 */
+	@Step("getting forgot password link text exist or not")
 	public boolean isForgotPwdLinkExist() {
 		return elementUtil.doIsDisplayed(forgotPwdLink);
 	}
 
+	@Step("Login with username: {0} and password {1}")
 	public AccountsPage doLogin(String un, String pwd) {
 		System.out.println("login with : " + un + " : " + pwd);
 		elementUtil.doSendKeys(emailId, un);
@@ -43,7 +48,8 @@ public class LoginPage {
 		elementUtil.doClick(loginBtn);
 		return new AccountsPage(driver);
 	}
-	
+
+	@Step("navigating to register Page")
 	public RegistrationPage navigateToRegisterPage() {
 		elementUtil.doClick(registerLink);
 		return new RegistrationPage(driver);
