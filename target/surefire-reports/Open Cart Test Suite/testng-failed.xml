@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Open Cart Test Suite]">
+  <test thread-count="5" verbose="0" name="Open Cart Accounts Page Test(failed)">
+    <classes>
+      <class name="com.qa.opencart.tests.AccountsPageTest">
+        <methods>
+          <include name="headerTest"/>
+          <include name="tearDown"/>
+          <include name="accPageTitleTest"/>
+          <include name="accPageSetup"/>
+          <include name="logoutLinkTest"/>
+          <include name="setUp"/>
+          <include name="accPageSectionsListTest"/>
+          <include name="searchExistTest"/>
+          <include name="searchTest"/>
+          <include name="selectProduct"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.AccountsPageTest -->
+    </classes>
+  </test> <!-- Open Cart Accounts Page Test(failed) -->
+  <test thread-count="5" verbose="0" name="Open Cart ProductInfo Page Test(failed)">
+    <classes>
+      <class name="com.qa.opencart.tests.ProductInfoPageTest">
+        <methods>
+          <include name="productInfoTest"/>
+          <include name="tearDown"/>
+          <include name="accPageSetup"/>
+          <include name="productInfoHeaderTest"/>
+          <include name="setUp"/>
+          <include name="productImagesTest"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.ProductInfoPageTest -->
+    </classes>
+  </test> <!-- Open Cart ProductInfo Page Test(failed) -->
+  <test thread-count="5" verbose="0" name="Open Cart Registration Page Test(failed)">
+    <classes>
+      <class name="com.qa.opencart.tests.RegistrationPageTest">
+        <methods>
+          <include name="userRegistrationTest"/>
+          <include name="tearDown"/>
+          <include name="setUpRegistration"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.opencart.tests.RegistrationPageTest -->
+    </classes>
+  </test> <!-- Open Cart Registration Page Test(failed) -->
+</suite> <!-- Failed suite [Open Cart Test Suite] -->

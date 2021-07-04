@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>9/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jul 01 10:37:40 IST 2021</td>
+<td>Started on:</td><td>Fri Jul 02 15:43:44 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>49 seconds (49899 ms)</td>
+<tr><td>Total time:</td><td>50 seconds (50606 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,18 +75,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.qa.opencart.tests.ProductInfoPageTest.productImagesTest()'><b>productImagesTest</b><br>Test class: com.qa.opencart.tests.ProductInfoPageTest<br>Parameters: Macbook, Macbook Pro</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.cssSelector: ul.thumbnails img (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SEZT1FF221NCU&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\SHAILE~1.KUM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 340f1fb862e274511d158e5eeae0cf5a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.qa.opencart.utils.ElementUtil.waitForElementsToBeVisible(ElementUtil.java:216)
-	at com.qa.opencart.pages.ProductInfoPage.getProductImagesCount(ProductInfoPage.java:40)
-	at com.qa.opencart.tests.ProductInfoPageTest.productImagesTest(ProductInfoPageTest.java:37)
+<td title='com.qa.opencart.tests.AccountsPageTest.selectProduct()'><b>selectProduct</b><br>Test class: com.qa.opencart.tests.AccountsPageTest<br>Parameters: Macbook, Macbook Pro</td>
+<td><div><pre>java.lang.AssertionError: expected [Macbook Pro] but found [Search - Macbook]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.qa.opencart.tests.AccountsPageTest.selectProduct(AccountsPageTest.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -112,18 +109,15 @@ Session ID: 340f1fb862e274511d158e5eeae0cf5a
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace889422145", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace889422145'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.cssSelector: ul.thumbnails img (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SEZT1FF221NCU&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\SHAILE~1.KUM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 340f1fb862e274511d158e5eeae0cf5a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.qa.opencart.utils.ElementUtil.waitForElementsToBeVisible(ElementUtil.java:216)
-	at com.qa.opencart.pages.ProductInfoPage.getProductImagesCount(ProductInfoPage.java:40)
-	at com.qa.opencart.tests.ProductInfoPageTest.productImagesTest(ProductInfoPageTest.java:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace558624761", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace558624761'><pre>java.lang.AssertionError: expected [Macbook Pro] but found [Search - Macbook]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.qa.opencart.tests.AccountsPageTest.selectProduct(AccountsPageTest.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -150,21 +144,18 @@ Session ID: 340f1fb862e274511d158e5eeae0cf5a
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>6</td>
-<td>com.qa.opencart.tests.ProductInfoPageTest@1a968a59</td></tr>
+<td>3</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
 <tr>
-<td title='com.qa.opencart.tests.ProductInfoPageTest.productImagesTest()'><b>productImagesTest</b><br>Test class: com.qa.opencart.tests.ProductInfoPageTest<br>Parameters: apple, apple cinema 30'</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.cssSelector: ul.thumbnails img (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SEZT1FF221NCU&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\SHAILE~1.KUM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 340f1fb862e274511d158e5eeae0cf5a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.qa.opencart.utils.ElementUtil.waitForElementsToBeVisible(ElementUtil.java:216)
-	at com.qa.opencart.pages.ProductInfoPage.getProductImagesCount(ProductInfoPage.java:40)
-	at com.qa.opencart.tests.ProductInfoPageTest.productImagesTest(ProductInfoPageTest.java:37)
+<td title='com.qa.opencart.tests.AccountsPageTest.selectProduct()'><b>selectProduct</b><br>Test class: com.qa.opencart.tests.AccountsPageTest<br>Parameters: Apple, Apple Cinema 30</td>
+<td><div><pre>java.lang.AssertionError: expected [Apple Cinema 30] but found [Search - Apple]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.qa.opencart.tests.AccountsPageTest.selectProduct(AccountsPageTest.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -190,18 +181,15 @@ Session ID: 340f1fb862e274511d158e5eeae0cf5a
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace622772003", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace622772003'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.cssSelector: ul.thumbnails img (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;SEZT1FF221NCU&apos;, ip: &apos;192.168.1.6&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.124, chrome: {chromedriverVersion: 91.0.4472.101 (af52a90bf870..., userDataDir: C:\Users\SHAILE~1.KUM\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 340f1fb862e274511d158e5eeae0cf5a
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.qa.opencart.utils.ElementUtil.waitForElementsToBeVisible(ElementUtil.java:216)
-	at com.qa.opencart.pages.ProductInfoPage.getProductImagesCount(ProductInfoPage.java:40)
-	at com.qa.opencart.tests.ProductInfoPageTest.productImagesTest(ProductInfoPageTest.java:37)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1095446005", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1095446005'><pre>java.lang.AssertionError: expected [Apple Cinema 30] but found [Search - Apple]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at com.qa.opencart.tests.AccountsPageTest.selectProduct(AccountsPageTest.java:68)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -228,8 +216,8 @@ Session ID: 340f1fb862e274511d158e5eeae0cf5a
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>6</td>
-<td>com.qa.opencart.tests.ProductInfoPageTest@1a968a59</td></tr>
+<td>3</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -239,10 +227,50 @@ Session ID: 340f1fb862e274511d158e5eeae0cf5a
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.qa.opencart.tests.ProductInfoPageTest.productImagesTest()'><b>productImagesTest</b><br>Test class: com.qa.opencart.tests.ProductInfoPageTest<br>Parameters: iMac, iMac</td>
+<td title='com.qa.opencart.tests.AccountsPageTest.accPageSectionsListTest()'><b>accPageSectionsListTest</b><br>Test class: com.qa.opencart.tests.AccountsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.AccountsPageTest.accPageTitleTest()'><b>accPageTitleTest</b><br>Test class: com.qa.opencart.tests.AccountsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.AccountsPageTest.headerTest()'><b>headerTest</b><br>Test class: com.qa.opencart.tests.AccountsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.AccountsPageTest.logoutLinkTest()'><b>logoutLinkTest</b><br>Test class: com.qa.opencart.tests.AccountsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.AccountsPageTest.searchExistTest()'><b>searchExistTest</b><br>Test class: com.qa.opencart.tests.AccountsPageTest</td>
+<td></td>
+<td>0</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.AccountsPageTest.searchTest()'><b>searchTest</b><br>Test class: com.qa.opencart.tests.AccountsPageTest<br>Parameters: Macbook</td>
+<td></td>
+<td>2</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.AccountsPageTest.searchTest()'><b>searchTest</b><br>Test class: com.qa.opencart.tests.AccountsPageTest<br>Parameters: iMac</td>
 <td></td>
 <td>3</td>
-<td>com.qa.opencart.tests.ProductInfoPageTest@1a968a59</td></tr>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.AccountsPageTest.searchTest()'><b>searchTest</b><br>Test class: com.qa.opencart.tests.AccountsPageTest<br>Parameters: Apple</td>
+<td></td>
+<td>2</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
+<tr>
+<td title='com.qa.opencart.tests.AccountsPageTest.selectProduct()'><b>selectProduct</b><br>Test class: com.qa.opencart.tests.AccountsPageTest<br>Parameters: iMac, iMac</td>
+<td></td>
+<td>7</td>
+<td>com.qa.opencart.tests.AccountsPageTest@343f4d3d</td></tr>
 </table><p>
 </body>
 </html>
