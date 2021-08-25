@@ -10,6 +10,11 @@ import org.openqa.selenium.WebElement;
 import com.qa.opencart.utils.Constants;
 import com.qa.opencart.utils.ElementUtil;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Story;
+
+@Epic("Epic 200")
+@Story("User story 201")
 public class AccountsPage {
 
 	// 1. By locator:

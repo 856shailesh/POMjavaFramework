@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -15,9 +14,7 @@ import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.aventstack.extentreports.reporter.configuration.ChartLocation;
-import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.qa.opencart.factory.DriverFactory;
 
 public class ExtentReportListener extends DriverFactory implements ITestListener {
@@ -27,6 +24,8 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 
 	private static ExtentReports extent = init();
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
+	private static ExtentReports extentReports;
+	
 
 	private static ExtentReports init() {
 
@@ -40,21 +39,23 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 				e.printStackTrace();
 			}
 		}
-		ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter(OUTPUT_FOLDER + FILE_NAME);
-		htmlReporter.config().setDocumentTitle("Automation Test Results");
-		htmlReporter.config().setReportName("Automation Test Results");
-		htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
-		htmlReporter.config().setTheme(Theme.STANDARD);
+		
+		extentReports = new ExtentReports();
+		ExtentSparkReporter reporter = new ExtentSparkReporter(OUTPUT_FOLDER + FILE_NAME);
+		reporter.config().setReportName("Automation Test Results");
+		extentReports.attachReporter(reporter);
+		extentReports.setSystemInfo("System", "MAC");
+		extentReports.setSystemInfo("Author", "Naveen AutomationLabs");
+		extentReports.setSystemInfo("Build#", "1.1");
+		extentReports.setSystemInfo("ProjectName", "OpenCart App");
 
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
-		extent.setReportUsesManualConfiguration(true);
 
-		return extent;
+		return extentReports;
 	}
 
 	public synchronized void onStart(ITestContext context) {
 		System.out.println("Test Suite started!");
+		
 	}
 
 	public synchronized void onFinish(ITestContext context) {
@@ -86,32 +87,19 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 
 	public synchronized void onTestSuccess(ITestResult result) {
 		System.out.println((result.getMethod().getMethodName() + " passed!"));
-
 		test.get().pass("Test passed");
 		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
 	}
 
 	public synchronized void onTestFailure(ITestResult result) {
 		System.out.println((result.getMethod().getMethodName() + " failed!"));
-		try {
-			test.get().fail(result.getThrowable(),
-					MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
-		} catch (IOException e) {
-			System.err
-					.println("Exception thrown while updating test fail status " + Arrays.toString(e.getStackTrace()));
-		}
+		test.get().fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
 		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
 	}
 
 	public synchronized void onTestSkipped(ITestResult result) {
 		System.out.println((result.getMethod().getMethodName() + " skipped!"));
-		try {
-			test.get().skip(result.getThrowable(),
-					MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
-		} catch (IOException e) {
-			System.err
-					.println("Exception thrown while updating test skip status " + Arrays.toString(e.getStackTrace()));
-		}
+		test.get().skip(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromPath(getScreenshot()).build());
 		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
 	}
 

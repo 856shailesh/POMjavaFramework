@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="4" name="Failed suite [Open Cart Test Suite]">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="4" name="Failed suite [Open Cart Test Suite]" parallel="tests">
   <listeners>
     <listener class-name="com.qa.opencart.listeners.ExtentReportListener"/>
     <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
   </listeners>
-  <test thread-count="5" verbose="4" name="Open Cart Accounts Page Test(failed)">
+  <test thread-count="2" verbose="4" name="Open Cart Accounts Page Test(failed)" parallel="tests">
     <classes>
       <class name="com.qa.opencart.tests.AccountsPageTest">
         <methods>
