@@ -28,7 +28,6 @@ public class DriverFactory {
 	public Properties prop;
 	public OptionsManager optionsManager;
 	public static String highlight;
-
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
 	/**
