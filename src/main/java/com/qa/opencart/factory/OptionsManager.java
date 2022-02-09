@@ -33,5 +33,4 @@ public class OptionsManager {
 		if(Boolean.parseBoolean(prop.getProperty("incognito"))) fo.addArguments("--incognito");
 		return fo;
 	}
-
 }

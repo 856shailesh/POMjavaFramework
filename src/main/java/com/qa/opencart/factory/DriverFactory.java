@@ -22,11 +22,6 @@ import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-/**
- * 
- * @author
- *
- */
 public class DriverFactory {
 
 	public WebDriver driver;
@@ -37,11 +32,7 @@ public class DriverFactory {
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
 	/**
-	 * This method is used to initialize the driver on the basis of given browser
-	 * name
-	 * 
-	 * @param browserName
-	 * @return
+	 * This method is used to initialize the driver on the basis of given browser name
 	 */
 	public WebDriver init_driver(Properties prop) {
 
@@ -52,7 +43,6 @@ public class DriverFactory {
 
 		if (browserName.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-
 			if (Boolean.parseBoolean(prop.getProperty("remote"))) {
 				init_remoteDriver("chrome");
 			} else {
