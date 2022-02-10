@@ -12,28 +12,27 @@ import com.qa.opencart.utils.ExcelUtil;
 
 public class RegistrationPageTest extends BaseTest {
 
-	@BeforeClass
-	public void setUpRegistration() {
-		registrationPage = loginPage.navigateToRegisterPage();
-	}
+    @BeforeClass
+    public void setUpRegistration() {
+        registrationPage = loginPage.navigateToRegisterPage();
+    }
 
-	public String getRandomEmail() {
-		Random randomGenerator = new Random();
-		String email = "shailesh" + randomGenerator.nextInt(1000) + "@gmail.com";
-		return email;
-	}
+    public String getRandomEmail() {
+        Random randomGenerator = new Random();
+        String email = "shailesh" + randomGenerator.nextInt(1000) + "@gmail.com";
+        return email;
+    }
 
-	@DataProvider
-	public Object[][] getRegisterData() {
-		return ExcelUtil.getTestData(Constants.REGISTER_SHEET_NAME);
-	}
+    @DataProvider
+    public Object[][] getRegisterData() {
+        return ExcelUtil.getTestData(Constants.REGISTER_SHEET_NAME);
+    }
 
-	@Test(dataProvider = "getRegisterData")
-	public void userRegistrationTest(String firstName, String lastName, String telephone, String password,
-			String subscribe) {
+    @Test(dataProvider = "getRegisterData")
+    public void userRegistrationTest(String firstName, String lastName, String telephone, String password,
+                                     String subscribe) {
 
-		Assert.assertTrue(registrationPage.accountRegistration(firstName, lastName, getRandomEmail(), telephone,
-				password, subscribe));
-	}
-
+        Assert.assertTrue(registrationPage.accountRegistration(firstName, lastName, getRandomEmail(), telephone,
+                password, subscribe));
+    }
 }

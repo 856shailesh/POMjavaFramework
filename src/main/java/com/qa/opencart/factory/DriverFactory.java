@@ -89,7 +89,6 @@ public class DriverFactory {
 				e.printStackTrace();
 			}
 		}
-
 	}
 
 	public static synchronized WebDriver getDriver() {
